@@ -30,6 +30,7 @@ const isLocalhost = Boolean(
       }
   
       window.addEventListener('load', () => {
+        console.log("load 成功");
         const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
   
         if (isLocalhost) {
@@ -56,6 +57,7 @@ const isLocalhost = Boolean(
     navigator.serviceWorker
       .register(swUrl)
       .then((registration) => {
+        console.log("注册成功");
         registration.onupdatefound = () => {
           const installingWorker = registration.installing;
           if (installingWorker == null) {
