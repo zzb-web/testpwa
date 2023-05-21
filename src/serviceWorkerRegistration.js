@@ -31,6 +31,7 @@ const isLocalhost = Boolean(
   
       window.addEventListener('load', () => {
         console.log("load 成功");
+        console.log(`${process.env.PUBLIC_URL}/service-worker.js`);
         const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
   
         if (isLocalhost) {
